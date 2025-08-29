@@ -11,7 +11,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class ApiConfiguration {
-  rootUrl: string = 'http://localhost:8088/api/v1';
+  rootUrl: string = 'http://52.90.96.138:8088/api/v1';
 }
 
 /**
