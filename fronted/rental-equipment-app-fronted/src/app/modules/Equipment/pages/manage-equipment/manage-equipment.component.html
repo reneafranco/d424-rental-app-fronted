@@ -26,18 +26,18 @@
                  placeholder="Equipment title">
         </div>
         <div class="col-md-6">
-          <label for="author" class="form-label">Author name</label>
+          <label for="author" class="form-label">Brand name</label>
           <input [(ngModel)]="equipmentRequest.authorName" type="email" class="form-control" id="author" name="author"
-                 placeholder="Creator name">
+                 placeholder="Brand name">
         </div>
         <div class="col-md-6">
-          <label for="isbn" class="form-label">ISBN</label>
+          <label for="isbn" class="form-label">Serial Number</label>
           <input [(ngModel)]="equipmentRequest.isbn" type="text" class="form-control" id="isbn" name="isbn">
         </div>
         <div class="col-12">
-          <label for="synopsis" class="form-label">Synopsis</label>
+          <label for="synopsis" class="form-label">Description</label>
           <textarea [(ngModel)]="equipmentRequest.synopsis" rows="4" class="form-control" id="synopsis" name="synopsis"
-                    placeholder="1234 Main St"></textarea>
+                    placeholder="Description of your equipment"></textarea>
         </div>
         <div class="col-12">
           <div class="form-check">
