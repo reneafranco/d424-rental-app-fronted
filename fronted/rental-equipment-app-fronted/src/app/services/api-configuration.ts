@@ -11,8 +11,9 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class ApiConfiguration {
-  rootUrl: string = 'http://54.166.197.126:8088/api/v1';
+  rootUrl: string = 'https://api.rental-equipment-app.org/api/v1';
 }
+
 
 /**
  * Parameters for `ApiModule.forRoot()`
