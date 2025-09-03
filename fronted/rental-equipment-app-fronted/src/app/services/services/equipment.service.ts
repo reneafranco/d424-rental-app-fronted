@@ -70,6 +70,10 @@ export class EquipmentService extends BaseService {
     );
   }
 
+  deleteEquipment(id: number) {
+    return this.http.delete(`/api/v1/equipments/${id}`);
+  }
+
   /** Path part for operation `saveEquipment()` */
   static readonly SaveEquipmentPath = '/equipments';
 

@@ -77,13 +77,13 @@ export class MyEquipmentsComponent implements OnInit {
   }
 
   archiveEquipment(equipment: EquipmentResponse) {
-    this.equipmentService.updateArchivedStatus({
-      'equipment-id': equipment.id as number
-    }).subscribe({
-      next: () => {
-        equipment.archived = !equipment.archived;
-      }
-    });
+    this.equipmentService.deleteEquipment(equipment.id as number)
+      .subscribe({
+        next: () => {
+          this.equipmentResponse.content = this.equipmentResponse.content
+            ?.filter(e => e.id !== equipment.id);
+        }
+      });
   }
 
   shareEquipment(equipment: EquipmentResponse) {
