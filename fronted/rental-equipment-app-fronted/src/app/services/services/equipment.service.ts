@@ -71,8 +71,9 @@ export class EquipmentService extends BaseService {
   }
 
   deleteEquipment(id: number) {
-    return this.http.delete(`/api/v1/equipments/${id}`);
+    return this.http.delete(`http://localhost/api/v1/equipments/delete/${id}`);
   }
+
 
   /** Path part for operation `saveEquipment()` */
   static readonly SaveEquipmentPath = '/equipments';
@@ -247,9 +248,9 @@ export class EquipmentService extends BaseService {
    *
    * This method doesn't expect any request body.
    */
-  updateArchivedStatus(params: UpdateArchivedStatus$Params, context?: HttpContext): Observable<number> {
+  updateArchivedStatus(params: UpdateArchivedStatus$Params, context?: HttpContext): Observable<void> {
     return this.updateArchivedStatus$Response(params, context).pipe(
-      map((r: StrictHttpResponse<number>): number => r.body)
+      map(() => void 0)
     );
   }
 

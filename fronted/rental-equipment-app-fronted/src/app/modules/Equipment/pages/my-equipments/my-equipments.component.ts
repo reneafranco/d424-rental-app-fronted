@@ -77,7 +77,7 @@ export class MyEquipmentsComponent implements OnInit {
   }
 
   archiveEquipment(equipment: EquipmentResponse) {
-    this.equipmentService.deleteEquipment(equipment.id as number)
+    this.equipmentService.updateArchivedStatus({ 'equipment-id': equipment.id as number })
       .subscribe({
         next: () => {
           this.equipmentResponse.content = this.equipmentResponse.content
